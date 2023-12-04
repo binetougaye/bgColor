@@ -12,23 +12,33 @@
 
 <body>
     <div id="container">
-        <input type="number" id="input" placeholder="Saisir age actuel">
-        <input type="number" id="input2" placeholder="Saisir age prévu">
-        <input type="submit" id="btn"></button>
-        <p id="error"></p>
-        <p id="text1"></p>
-        <p id="text2"></p>
+        <!-- <form action=""> -->
+        <div>
+            <input type="text" id="nom" placeholder="Nom" required>
+        </div>
+        <div>
+            <input type="text" id="prenom" placeholder="Prenom" required>
+        </div>
+        <div>
+            <input type="text" id="mdp" placeholder="Mot de passe" onchange="validatePassword1()">
+        </div>
+        <p id="mdp1"></p>
+        <div>
+            <input type="text" id="mdp2" placeholder="Confirmer mot de passe" onchange="validatePassword2()">
+        </div>
+        <p id="passwordError"></p>
 
-        <!-- <table id="table">
-            <tr>
-                <td></td>
-            </tr>
-        </table> -->
+        <div>
+            <button id="btn">Confirmer</button>
+            <p id="btnError"></p>
+        </div>
+        <!-- </form> -->
     </div>
 
 
     <!-- <script src="cisko.js"></script> -->
-    <script src="app.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <script src="index.js"></script>
 
 </body>
 

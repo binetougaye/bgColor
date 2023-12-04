@@ -1,32 +1,39 @@
-let inputDate = document.getElementById("input");
-console.log(typeof inputDate);
-let inputDate2 = document.getElementById("input2");
+// Variables
+let input1 = document.getElementById("input1");
 let btn = document.getElementById("btn");
-let error = document.getElementById("error");
-let text1 = document.getElementById("text1");
-let text2 = document.getElementById("text2");
-let container = document.getElementById("container");
-// console.log(inputDate.value);
-// let dateValue = inputDate.value;
-// console.log(dateValue);
-// let dateObj = new Date();
-// let day = dateObj.getFullYear();
-// console.log(day);
-btn.addEventListener("click", function (e) {
-  if (Number(inputDate.value) > Number(inputDate2.value)) {
-    alert("erreur");
-    // error.innerHTML = " erreur";
-  } else {
-    let ageEnJours = inputDate.value * 365;
-    text1.innerHTML = "Vous avez vécu " + ageEnJours + " jours";
-    let diff = Number(inputDate2.value) - Number(inputDate.value);
-    let enJours = diff * 365;
-    text2.innerHTML =
-      "Il vous reste " +
-      enJours +
-      " jours" +
-      " pour avoir " +
-      inputDate2.value +
-      " ans";
-  }
+let text = document.getElementById("text");
+// LOGIC
+btn.addEventListener("click", function () {
+  let Today = new Date(input1.value);
+  let getYear = Today.getFullYear();
+  console.log(getYear);
+  // An actu
+  let year = new Date();
+  let anActu = year.getFullYear();
+  console.log(anActu);
+  // Mois
+  let today = new Date(input1.value);
+  let getMonth = today.getMonth();
+  console.log(getMonth);
+  //  Mois actu
+  let month = new Date();
+  let moisActu = month.getMonth();
+  console.log(moisActu);
+  // JOUR
+  let days = new Date(input1.value);
+  let getDays = days.getDate();
+  console.log(getDays);
+  // Jour actu
+  let jour = new Date();
+  let jourActu = jour.getDate();
+  console.log(jourActu);
+  // Calcul age
+  let age = anActu - getYear;
+  let ageMois = moisActu - getMonth;
+
+  let ageJours = ageMois * 30;
+  console.log(ageJours);
+  text.innerHTML = `Vous avez ${age} ans ${ageMois} mois ${ageJours} jours`;
 });
+// 1 mois 30 jours
+// 9 * 30

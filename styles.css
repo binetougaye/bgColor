@@ -1,4 +1,26 @@
-#error {
-    color: red;
-    font-size: 12px;
+.card {
+    background-color: #ccc;
+    color: navy;
+    width: 400px;
+    height: 200px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container div {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+img {
+    width: 40px;
+    padding: 10px;
+}
+
+#btn {
+    width: 100%;
 }
